@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD9581C725DE2A99008FABA5 /* seeker_sneakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9581C625DE2A99008FABA5 /* seeker_sneakerApp.swift */; };
+		DD9581C925DE2A99008FABA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9581C825DE2A99008FABA5 /* ContentView.swift */; };
+		DD9581CB25DE2A9A008FABA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9581CA25DE2A9A008FABA5 /* Assets.xcassets */; };
+		DD9581CE25DE2A9A008FABA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9581CD25DE2A9A008FABA5 /* Preview Assets.xcassets */; };
+		DD9581D925DE2A9A008FABA5 /* seeker_sneakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9581D825DE2A9A008FABA5 /* seeker_sneakerTests.swift */; };
+		DD9581E425DE2A9A008FABA5 /* seeker_sneakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9581E325DE2A9A008FABA5 /* seeker_sneakerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD9581D525DE2A9A008FABA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD9581BB25DE2A99008FABA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD9581C225DE2A99008FABA5;
+			remoteInfo = "seeker-sneaker";
+		};
+		DD9581E025DE2A9A008FABA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD9581BB25DE2A99008FABA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD9581C225DE2A99008FABA5;
+			remoteInfo = "seeker-sneaker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD9581C325DE2A99008FABA5 /* seeker-sneaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seeker-sneaker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9581C625DE2A99008FABA5 /* seeker_sneakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seeker_sneakerApp.swift; sourceTree = "<group>"; };
+		DD9581C825DE2A99008FABA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DD9581CA25DE2A9A008FABA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD9581CD25DE2A9A008FABA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DD9581CF25DE2A9A008FABA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD9581D425DE2A9A008FABA5 /* seeker-sneakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "seeker-sneakerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9581D825DE2A9A008FABA5 /* seeker_sneakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seeker_sneakerTests.swift; sourceTree = "<group>"; };
+		DD9581DA25DE2A9A008FABA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD9581DF25DE2A9A008FABA5 /* seeker-sneakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "seeker-sneakerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD9581E325DE2A9A008FABA5 /* seeker_sneakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seeker_sneakerUITests.swift; sourceTree = "<group>"; };
+		DD9581E525DE2A9A008FABA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD9581C025DE2A99008FABA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9581D125DE2A9A008FABA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9581DC25DE2A9A008FABA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD9581BA25DE2A99008FABA5 = {
+			isa = PBXGroup;
+			children = (
+				DD9581C525DE2A99008FABA5 /* seeker-sneaker */,
+				DD9581D725DE2A9A008FABA5 /* seeker-sneakerTests */,
+				DD9581E225DE2A9A008FABA5 /* seeker-sneakerUITests */,
+				DD9581C425DE2A99008FABA5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD9581C425DE2A99008FABA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD9581C325DE2A99008FABA5 /* seeker-sneaker.app */,
+				DD9581D425DE2A9A008FABA5 /* seeker-sneakerTests.xctest */,
+				DD9581DF25DE2A9A008FABA5 /* seeker-sneakerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD9581C525DE2A99008FABA5 /* seeker-sneaker */ = {
+			isa = PBXGroup;
+			children = (
+				DD9581C625DE2A99008FABA5 /* seeker_sneakerApp.swift */,
+				DD9581C825DE2A99008FABA5 /* ContentView.swift */,
+				DD9581CA25DE2A9A008FABA5 /* Assets.xcassets */,
+				DD9581CF25DE2A9A008FABA5 /* Info.plist */,
+				DD9581CC25DE2A9A008FABA5 /* Preview Content */,
+			);
+			path = "seeker-sneaker";
+			sourceTree = "<group>";
+		};
+		DD9581CC25DE2A9A008FABA5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DD9581CD25DE2A9A008FABA5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DD9581D725DE2A9A008FABA5 /* seeker-sneakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD9581D825DE2A9A008FABA5 /* seeker_sneakerTests.swift */,
+				DD9581DA25DE2A9A008FABA5 /* Info.plist */,
+			);
+			path = "seeker-sneakerTests";
+			sourceTree = "<group>";
+		};
+		DD9581E225DE2A9A008FABA5 /* seeker-sneakerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD9581E325DE2A9A008FABA5 /* seeker_sneakerUITests.swift */,
+				DD9581E525DE2A9A008FABA5 /* Info.plist */,
+			);
+			path = "seeker-sneakerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD9581C225DE2A99008FABA5 /* seeker-sneaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9581E825DE2A9A008FABA5 /* Build configuration list for PBXNativeTarget "seeker-sneaker" */;
+			buildPhases = (
+				DD9581BF25DE2A99008FABA5 /* Sources */,
+				DD9581C025DE2A99008FABA5 /* Frameworks */,
+				DD9581C125DE2A99008FABA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "seeker-sneaker";
+			productName = "seeker-sneaker";
+			productReference = DD9581C325DE2A99008FABA5 /* seeker-sneaker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD9581D325DE2A9A008FABA5 /* seeker-sneakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9581EB25DE2A9A008FABA5 /* Build configuration list for PBXNativeTarget "seeker-sneakerTests" */;
+			buildPhases = (
+				DD9581D025DE2A9A008FABA5 /* Sources */,
+				DD9581D125DE2A9A008FABA5 /* Frameworks */,
+				DD9581D225DE2A9A008FABA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD9581D625DE2A9A008FABA5 /* PBXTargetDependency */,
+			);
+			name = "seeker-sneakerTests";
+			productName = "seeker-sneakerTests";
+			productReference = DD9581D425DE2A9A008FABA5 /* seeker-sneakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DD9581DE25DE2A9A008FABA5 /* seeker-sneakerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD9581EE25DE2A9A008FABA5 /* Build configuration list for PBXNativeTarget "seeker-sneakerUITests" */;
+			buildPhases = (
+				DD9581DB25DE2A9A008FABA5 /* Sources */,
+				DD9581DC25DE2A9A008FABA5 /* Frameworks */,
+				DD9581DD25DE2A9A008FABA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD9581E125DE2A9A008FABA5 /* PBXTargetDependency */,
+			);
+			name = "seeker-sneakerUITests";
+			productName = "seeker-sneakerUITests";
+			productReference = DD9581DF25DE2A9A008FABA5 /* seeker-sneakerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD9581BB25DE2A99008FABA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					DD9581C225DE2A99008FABA5 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					DD9581D325DE2A9A008FABA5 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = DD9581C225DE2A99008FABA5;
+					};
+					DD9581DE25DE2A9A008FABA5 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = DD9581C225DE2A99008FABA5;
+					};
+				};
+			};
+			buildConfigurationList = DD9581BE25DE2A99008FABA5 /* Build configuration list for PBXProject "seeker-sneaker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD9581BA25DE2A99008FABA5;
+			productRefGroup = DD9581C425DE2A99008FABA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD9581C225DE2A99008FABA5 /* seeker-sneaker */,
+				DD9581D325DE2A9A008FABA5 /* seeker-sneakerTests */,
+				DD9581DE25DE2A9A008FABA5 /* seeker-sneakerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD9581C125DE2A99008FABA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9581CE25DE2A9A008FABA5 /* Preview Assets.xcassets in Resources */,
+				DD9581CB25DE2A9A008FABA5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9581D225DE2A9A008FABA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9581DD25DE2A9A008FABA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD9581BF25DE2A99008FABA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9581C925DE2A99008FABA5 /* ContentView.swift in Sources */,
+				DD9581C725DE2A99008FABA5 /* seeker_sneakerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9581D025DE2A9A008FABA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9581D925DE2A9A008FABA5 /* seeker_sneakerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9581DB25DE2A9A008FABA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD9581E425DE2A9A008FABA5 /* seeker_sneakerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD9581D625DE2A9A008FABA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD9581C225DE2A99008FABA5 /* seeker-sneaker */;
+			targetProxy = DD9581D525DE2A9A008FABA5 /* PBXContainerItemProxy */;
+		};
+		DD9581E125DE2A9A008FABA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD9581C225DE2A99008FABA5 /* seeker-sneaker */;
+			targetProxy = DD9581E025DE2A9A008FABA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DD9581E625DE2A9A008FABA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD9581E725DE2A9A008FABA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD9581E925DE2A9A008FABA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"seeker-sneaker/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "seeker-sneaker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cmpe137.seeker-sneaker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD9581EA25DE2A9A008FABA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"seeker-sneaker/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "seeker-sneaker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cmpe137.seeker-sneaker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DD9581EC25DE2A9A008FABA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "seeker-sneakerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cmpe137.seeker-sneakerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/seeker-sneaker.app/seeker-sneaker";
+			};
+			name = Debug;
+		};
+		DD9581ED25DE2A9A008FABA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "seeker-sneakerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cmpe137.seeker-sneakerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/seeker-sneaker.app/seeker-sneaker";
+			};
+			name = Release;
+		};
+		DD9581EF25DE2A9A008FABA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "seeker-sneakerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cmpe137.seeker-sneakerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "seeker-sneaker";
+			};
+			name = Debug;
+		};
+		DD9581F025DE2A9A008FABA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "seeker-sneakerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cmpe137.seeker-sneakerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "seeker-sneaker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD9581BE25DE2A99008FABA5 /* Build configuration list for PBXProject "seeker-sneaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9581E625DE2A9A008FABA5 /* Debug */,
+				DD9581E725DE2A9A008FABA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD9581E825DE2A9A008FABA5 /* Build configuration list for PBXNativeTarget "seeker-sneaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9581E925DE2A9A008FABA5 /* Debug */,
+				DD9581EA25DE2A9A008FABA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD9581EB25DE2A9A008FABA5 /* Build configuration list for PBXNativeTarget "seeker-sneakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9581EC25DE2A9A008FABA5 /* Debug */,
+				DD9581ED25DE2A9A008FABA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD9581EE25DE2A9A008FABA5 /* Build configuration list for PBXNativeTarget "seeker-sneakerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD9581EF25DE2A9A008FABA5 /* Debug */,
+				DD9581F025DE2A9A008FABA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD9581BB25DE2A99008FABA5 /* Project object */;
+}
