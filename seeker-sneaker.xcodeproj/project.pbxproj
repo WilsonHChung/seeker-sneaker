@@ -13,6 +13,7 @@
 		DD9581CE25DE2A9A008FABA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9581CD25DE2A9A008FABA5 /* Preview Assets.xcassets */; };
 		DD9581D925DE2A9A008FABA5 /* seeker_sneakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9581D825DE2A9A008FABA5 /* seeker_sneakerTests.swift */; };
 		DD9581E425DE2A9A008FABA5 /* seeker_sneakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9581E325DE2A9A008FABA5 /* seeker_sneakerUITests.swift */; };
+		DD95821825E72B45008FABA5 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD95821725E72B45008FABA5 /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		DD9581DF25DE2A9A008FABA5 /* seeker-sneakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "seeker-sneakerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9581E325DE2A9A008FABA5 /* seeker_sneakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seeker_sneakerUITests.swift; sourceTree = "<group>"; };
 		DD9581E525DE2A9A008FABA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD95821725E72B45008FABA5 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				DD9581CA25DE2A9A008FABA5 /* Assets.xcassets */,
 				DD9581CF25DE2A9A008FABA5 /* Info.plist */,
 				DD9581CC25DE2A9A008FABA5 /* Preview Content */,
+				DD95821725E72B45008FABA5 /* Storyboard.storyboard */,
 			);
 			path = "seeker-sneaker";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			files = (
 				DD9581CE25DE2A9A008FABA5 /* Preview Assets.xcassets in Resources */,
 				DD9581CB25DE2A9A008FABA5 /* Assets.xcassets in Resources */,
+				DD95821825E72B45008FABA5 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +423,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"seeker-sneaker/Preview Content\"";
+				DEVELOPMENT_TEAM = C8BXUWKJSP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "seeker-sneaker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -440,6 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"seeker-sneaker/Preview Content\"";
+				DEVELOPMENT_TEAM = C8BXUWKJSP;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "seeker-sneaker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
