@@ -14,6 +14,9 @@
 		DD9581D925DE2A9A008FABA5 /* seeker_sneakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9581D825DE2A9A008FABA5 /* seeker_sneakerTests.swift */; };
 		DD9581E425DE2A9A008FABA5 /* seeker_sneakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9581E325DE2A9A008FABA5 /* seeker_sneakerUITests.swift */; };
 		DD95821825E72B45008FABA5 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD95821725E72B45008FABA5 /* Storyboard.storyboard */; };
+		E3B90CE825EF97E000476745 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90CE725EF97E000476745 /* Feed.swift */; };
+		E3B90CED25EF9A0C00476745 /* ImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90CEC25EF9A0C00476745 /* ImagesView.swift */; };
+		E3B90CF225EF9AB700476745 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90CF125EF9AB700476745 /* FeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		DD9581E325DE2A9A008FABA5 /* seeker_sneakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seeker_sneakerUITests.swift; sourceTree = "<group>"; };
 		DD9581E525DE2A9A008FABA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD95821725E72B45008FABA5 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		E3B90CE725EF97E000476745 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		E3B90CEC25EF9A0C00476745 /* ImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesView.swift; sourceTree = "<group>"; };
+		E3B90CF125EF9AB700476745 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				DD9581C625DE2A99008FABA5 /* seeker_sneakerApp.swift */,
 				DD9581C825DE2A99008FABA5 /* ContentView.swift */,
 				DD9581CA25DE2A9A008FABA5 /* Assets.xcassets */,
+				E3B90CE725EF97E000476745 /* Feed.swift */,
+				E3B90CEC25EF9A0C00476745 /* ImagesView.swift */,
+				E3B90CF125EF9AB700476745 /* FeedView.swift */,
 				DD9581CF25DE2A9A008FABA5 /* Info.plist */,
 				DD9581CC25DE2A9A008FABA5 /* Preview Content */,
 				DD95821725E72B45008FABA5 /* Storyboard.storyboard */,
@@ -263,7 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B90CF225EF9AB700476745 /* FeedView.swift in Sources */,
+				E3B90CED25EF9A0C00476745 /* ImagesView.swift in Sources */,
 				DD9581C925DE2A99008FABA5 /* ContentView.swift in Sources */,
+				E3B90CE825EF97E000476745 /* Feed.swift in Sources */,
 				DD9581C725DE2A99008FABA5 /* seeker_sneakerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
