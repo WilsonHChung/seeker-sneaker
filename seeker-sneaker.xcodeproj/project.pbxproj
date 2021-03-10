@@ -17,6 +17,7 @@
 		E3B90CE825EF97E000476745 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90CE725EF97E000476745 /* Feed.swift */; };
 		E3B90CED25EF9A0C00476745 /* ImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90CEC25EF9A0C00476745 /* ImagesView.swift */; };
 		E3B90CF225EF9AB700476745 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90CF125EF9AB700476745 /* FeedView.swift */; };
+		E3B90CF725EFAFA500476745 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90CF625EFAFA500476745 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		E3B90CE725EF97E000476745 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		E3B90CEC25EF9A0C00476745 /* ImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesView.swift; sourceTree = "<group>"; };
 		E3B90CF125EF9AB700476745 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		E3B90CF625EFAFA500476745 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				E3B90CE725EF97E000476745 /* Feed.swift */,
 				E3B90CEC25EF9A0C00476745 /* ImagesView.swift */,
 				E3B90CF125EF9AB700476745 /* FeedView.swift */,
+				E3B90CF625EFAFA500476745 /* SearchBar.swift */,
 				DD9581CF25DE2A9A008FABA5 /* Info.plist */,
 				DD9581CC25DE2A9A008FABA5 /* Preview Content */,
 				DD95821725E72B45008FABA5 /* Storyboard.storyboard */,
@@ -277,6 +280,7 @@
 				DD9581C925DE2A99008FABA5 /* ContentView.swift in Sources */,
 				E3B90CE825EF97E000476745 /* Feed.swift in Sources */,
 				DD9581C725DE2A99008FABA5 /* seeker_sneakerApp.swift in Sources */,
+				E3B90CF725EFAFA500476745 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
