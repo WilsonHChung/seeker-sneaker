@@ -19,10 +19,13 @@ struct FeedView: View {
                                spacing: 1) {
                         ForEach(feedData.filter({"\($0)".contains(text.lowercased()) || text.isEmpty})) {
                             item in
+                            NavigationLink(destination: ProductView(feed: item)){
                             ImagesView(feed: item)
                                 .frame(width: bounds.size.width / 3 - 0.6, height: bounds.size.width / 3 - 0.6)
+                            }
                         }
                     }
+                    .animation(.easeOut(duration: 0.3))
                 }
             }
         }
