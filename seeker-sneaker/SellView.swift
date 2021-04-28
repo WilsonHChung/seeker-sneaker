@@ -39,10 +39,9 @@ struct SellView: View {
                 
                 VStack {
                     if !asking {
-                        Button(action: {
-                            // Update db with new transaction,
-                            // go to confirmation page
-                        }) {
+                        NavigationLink(
+                        destination:
+                        ConfirmationView(type: "Sale", size: size, product: product, amount: highest_offer)){
                             Text(String(format: "Sell Now for $%i", highest_offer))
                                 .font(.title)
                                 .accentColor(.green)
@@ -85,10 +84,9 @@ struct SellView: View {
                         Text(String(format: "Highest Offer: $%i", highest_offer))
                             .padding(.bottom, 20)
                         
-                        Button(action: {
-                            // Update db with new offer,
-                            // go to confirmation page
-                        }) {
+                        NavigationLink(
+                        destination:
+                        ConfirmationView(type: "Ask", size: size, product: product, amount: Int(ask))){
                             Text("Submit")
                                 .font(.title)
                                 .padding(.vertical, 5)

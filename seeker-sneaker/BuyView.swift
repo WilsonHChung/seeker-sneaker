@@ -38,10 +38,9 @@ struct BuyView: View {
                 
                 VStack {
                     if !offering {
-                        Button(action: {
-                            // Update db with new transaction,
-                            // go to confirmation page
-                        }) {
+                        NavigationLink(
+                            destination:
+                            ConfirmationView(type: "Purchase", size: size, product: product, amount: price)){
                             Text(String(format: "Buy Now for $%i", price))
                                 .font(.title)
                                 .accentColor(.green)
@@ -83,15 +82,15 @@ struct BuyView: View {
                         Text(String(format: "Lowest Ask: $%i", price))
                             .padding(.bottom, 20)
                         
-                        Button(action: {
-                            // Update db with new offer,
-                            // go to confirmation page
-                        }) {
+                        NavigationLink(
+                            destination:
+                                ConfirmationView(type: "Offer", size: size, product: product, amount: Int(offer))){
                             Text("Submit")
                                 .font(.title)
                                 .padding(.vertical, 5)
                                 .accentColor(.green)
                         }
+                        
                     }
                     
                 }

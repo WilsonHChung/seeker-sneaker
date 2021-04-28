@@ -22,6 +22,7 @@
 		E3B90D0926045C0B00476745 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90D0826045C0B00476745 /* ProductView.swift */; };
 		E3B90D0E26393C4C00476745 /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90D0D26393C4C00476745 /* BuyView.swift */; };
 		E3B90D1626393F2500476745 /* SellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90D1526393F2500476745 /* SellView.swift */; };
+		E3B90D1B2639582500476745 /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90D1A2639582500476745 /* ConfirmationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		E3B90D0826045C0B00476745 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		E3B90D0D26393C4C00476745 /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
 		E3B90D1526393F2500476745 /* SellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellView.swift; sourceTree = "<group>"; };
+		E3B90D1A2639582500476745 /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				E3B90D0326045B4100476745 /* HomeView.swift */,
 				E3B90D0826045C0B00476745 /* ProductView.swift */,
 				E3B90D0D26393C4C00476745 /* BuyView.swift */,
+				E3B90D1A2639582500476745 /* ConfirmationView.swift */,
 				E3B90D1526393F2500476745 /* SellView.swift */,
 				E3B90CF625EFAFA500476745 /* SearchBar.swift */,
 				DD9581CF25DE2A9A008FABA5 /* Info.plist */,
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B90D1B2639582500476745 /* ConfirmationView.swift in Sources */,
 				E3B90D0926045C0B00476745 /* ProductView.swift in Sources */,
 				E3B90CF225EF9AB700476745 /* FeedView.swift in Sources */,
 				E3B90D0426045B4100476745 /* HomeView.swift in Sources */,
