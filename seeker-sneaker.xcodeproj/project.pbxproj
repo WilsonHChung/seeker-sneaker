@@ -20,6 +20,8 @@
 		E3B90CF725EFAFA500476745 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90CF625EFAFA500476745 /* SearchBar.swift */; };
 		E3B90D0426045B4100476745 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90D0326045B4100476745 /* HomeView.swift */; };
 		E3B90D0926045C0B00476745 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90D0826045C0B00476745 /* ProductView.swift */; };
+		E3B90D0E26393C4C00476745 /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90D0D26393C4C00476745 /* BuyView.swift */; };
+		E3B90D1626393F2500476745 /* SellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90D1526393F2500476745 /* SellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		E3B90CF625EFAFA500476745 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		E3B90D0326045B4100476745 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E3B90D0826045C0B00476745 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		E3B90D0D26393C4C00476745 /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
+		E3B90D1526393F2500476745 /* SellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 				E3B90CF125EF9AB700476745 /* FeedView.swift */,
 				E3B90D0326045B4100476745 /* HomeView.swift */,
 				E3B90D0826045C0B00476745 /* ProductView.swift */,
+				E3B90D0D26393C4C00476745 /* BuyView.swift */,
+				E3B90D1526393F2500476745 /* SellView.swift */,
 				E3B90CF625EFAFA500476745 /* SearchBar.swift */,
 				DD9581CF25DE2A9A008FABA5 /* Info.plist */,
 				DD9581CC25DE2A9A008FABA5 /* Preview Content */,
@@ -285,7 +291,9 @@
 				E3B90CF225EF9AB700476745 /* FeedView.swift in Sources */,
 				E3B90D0426045B4100476745 /* HomeView.swift in Sources */,
 				E3B90CED25EF9A0C00476745 /* ImagesView.swift in Sources */,
+				E3B90D0E26393C4C00476745 /* BuyView.swift in Sources */,
 				DD9581C925DE2A99008FABA5 /* ContentView.swift in Sources */,
+				E3B90D1626393F2500476745 /* SellView.swift in Sources */,
 				E3B90CE825EF97E000476745 /* Feed.swift in Sources */,
 				DD9581C725DE2A99008FABA5 /* seeker_sneakerApp.swift in Sources */,
 				E3B90CF725EFAFA500476745 /* SearchBar.swift in Sources */,
