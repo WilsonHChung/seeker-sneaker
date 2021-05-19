@@ -11,7 +11,7 @@ struct ConfirmationView: View {
     var type: String = "Purchase"
     var size: Double = 7.5
     var product: Feed = feedData[0]
-    var amount: Int = 450 // obtain from db
+    var amount: Int = 450 
     
     var body: some View {
         VStack{
