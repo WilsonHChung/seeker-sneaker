@@ -11,36 +11,25 @@ import Firebase
 
 struct ProductView: View {
     
-    
+    @State var data: [Double] = []
+        
     @State var text = ""
     @State var highestbid = ""
     @State var lowestask = ""
     @State var pricehistory = ""
-    
+//    @State var test = 1.0
+
     @State var highestbids: [String] = []
     @State var lowestasks: [String] = []
     @State var pricehistories: [String] = []
+//    @State var tests: [Double] = []
+
     
     @State var expand = false
     @State private var selected_size = 7.5
     var product: Feed = feedData[0]
     var body: some View {
         VStack{
-//            HStack {
-//                TextField("Enter your Name", text: $highestbid)
-//                Button(action: {upload() }) {
-//                    Text("Upload")
-//                }
-//                }.onAppear(perform: {
-//                    download()
-//                })
-//
-//            List(0..<lowestasks.count, id: \.self) { i in
-//                Text(lowestasks[i])
-//            }
-//            List(0..<highestbids.count, id: \.self) { i in
-//                Text(highestbids[i])
-//            }
             ScrollView{
                 Text(product.title.capitalized)
                     .font(.largeTitle)
@@ -119,8 +108,6 @@ struct ProductView: View {
                 }
                 .padding(.vertical, 20)
                 
-
-                
                 Image(product.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -128,59 +115,20 @@ struct ProductView: View {
                 // Visualization of Past Sales
                 Spacer()
                 
-//                var doubles = [] as Array<Double>
 
-//
-//                List(0..<pricehistories.count, id: \.self) { i in
-//                    Text(pricehistories[0])
-////                    let doubles = pricehistories[0].compactMap(Double.init)
-////                    let doubles = pricehistories[0].map { (value) -> Double in
-////                        return Double(value)!
-////                    }
-////                    let test = Array(pricehistories[0])
-////                    Text(test)
-////                    Text(Array(pricehistories[0]))
-//
-//
-//                    let array = pricehistories[0].components(separatedBy: ", ")
-//
-////                    let arrOfDoubles = array.map { (value) -> Double? in
-////                        return Double(value)
-////                    }
-//                    let doubles = array.compactMap(Double.init)
-//
-////                    Text(arrOfDoubles)
-//
-//
-////                    LineView(data: doubles, title: "Price History")
-////                        .frame(height: UIScreen.main.bounds.size.height)
-////                        .padding()
-//
-//                }
-                
-
-
-                LineView(data: [120, 140, 200, 300, 200], title: "Price History")
+                LineView(data: data,
+                         title: "Price History",
+                         valueSpecifier: "$%.0f")
                     .frame(height: UIScreen.main.bounds.size.height)
                     .padding()
-                
-                
 
-                
-//                LineView(data: doubles, title: "Price History")
-//                    .frame(height: UIScreen.main.bounds.size.height)
-//                    .padding()
+            
             }
         }
 
     }
     func upload() {
         let db = Firestore.firestore()
-//            db.collection("transactions").document().setData(["name":name])
-//            db.collection("transactions").document().setData(["type":type])
-//            db.collection("transactions").document().setData(["size":size])
-//            db.collection("transactions").document().setData(["price":price])
-
     }
 
     func download() {
@@ -197,27 +145,39 @@ struct ProductView: View {
                 print("There is an error downloading content from the database.")
                 return
             }
+            
+            // stores the append values of pricehistory from the DB
+            var storage: [Double] = []
 
-        for i in snap!.documentChanges {
-            let documentId = i.document.documentID
-            let highestbid = i.document.get("highestbid")
-            let lowestask = i.document.get("lowestask")
-            let pricehistory = i.document.get("pricehistory")
+            for i in snap!.documentChanges {
+                let documentId = i.document.documentID
+                let highestbid = i.document.get("highestbid")
+                let lowestask = i.document.get("lowestask")
+                let pricehistory = i.document.get("pricehistory")
+//                let test = i.document.get("test")
+                
+                // removes extraneous characters and stores or appends purely purchase prices
+                let prices = ("\(pricehistory!)")
+                let stringArray = prices.components(separatedBy: CharacterSet.decimalDigits.inverted)
+                for item in stringArray {
+                    if let history = Int(item) {
+                        print("number: \(history)")
+                        storage.append(Double(history))
+                    }
+                }
+                
+                DispatchQueue.main.async {
+                    highestbids.append("\(highestbid!)")
+                    lowestasks.append("\(lowestask!)")
+                    pricehistories.append("\(pricehistory)")
 
-            DispatchQueue.main.async {
-                highestbids.append("\(highestbid!)")
-                lowestasks.append("\(lowestask!)")
-                pricehistories.append("\(pricehistory)")
-//                print("\(pricehistory!)")
+                }
 
             }
-
-
+            data = storage
         }
-
-
     }
-}
+    
 }
 
 struct ProductView_Previews: PreviewProvider {

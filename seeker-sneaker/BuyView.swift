@@ -11,8 +11,13 @@ import Firebase
 struct BuyView: View {
     
     @State var lowestask = ""
-    @State var lowestasks: [String] = []
+    @State var pricehistory = ""
+    @State var store_value = ""
     
+    @State var lowestasks: [String] = []
+    @State var pricehistories: [String] = []
+    
+    var purchased_price: Double = 0
     var size: Double = 7.5
     var product: Feed = feedData[0]
     var price: Int = 450 // obtain from db
@@ -40,28 +45,34 @@ struct BuyView: View {
                     Image(product.image)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                    
+                    
                 }.onAppear(perform: {
                     download()
                 })
                 
                 VStack {
                     if !offering {
-                        Button(action: {
-                            // Update db with new transaction,
-                            // go to confirmation page
-                        }) {
+
+                        NavigationLink(
+                        destination:
+                        ConfirmationView(type: "Purchase", size: size, product: product, amount: store_value)){
                             List(0..<lowestasks.count, id: \.self) { i in
-//                                Text(String(format: "Buy Now for $%i", price))
                                 Text("Buy Now for $\(lowestasks[0])")
                                     .font(.title)
                                     .accentColor(.green)
                                     .padding(.horizontal, 55)
                                     .padding(.vertical, 25)
-                            }
-                        }
+                                }
+                            
+                        }.onDisappear(perform: {
+                            upload()
+                        })
+                            
                         Text("or")
                             .font(.title)
                             .padding(.vertical, 10)
+                        
                     }
                     Button(action: {
                         self.offering.toggle()
@@ -87,15 +98,9 @@ struct BuyView: View {
                                })
                             .accentColor(.green)
                             .padding(.horizontal, 30)
-                        
-//                        Text(String(format: "Highest Offer: $%i", highest_offer))
-//                            .padding(.top, 20)
+                    
 
                         Text(String(format: "Your Offer: $%.0f", offer))
-//                            .padding(.bottom, 5)
-//
-//                        Text(String(format: "Lowest Ask: $%i", price))
-////                            .padding(.bottom, 20)
                         
                         List(0..<lowestasks.count, id: \.self) { i in
                             Text("Lowest Ask: $\(lowestasks[0])")
@@ -103,10 +108,9 @@ struct BuyView: View {
                                 .padding(.horizontal, 103)
                         }
                         
-                        Button(action: {
-                            // Update db with new offer,
-                            // go to confirmation page
-                        }) {
+                        NavigationLink(
+                            destination:
+                                ConfirmationView(type: "Offer", size: size, product: product, amount: String(offer))){
                             Text("Submit")
                                 .font(.title)
                                 .padding(.vertical, 5)
@@ -121,6 +125,8 @@ struct BuyView: View {
     }
     func upload() {
         let db = Firestore.firestore()
+        db.collection("test").document("air jordan 1 fragment").setData(["latestprice":store_value])
+
 //            db.collection("transactions").document().setData(["name":name])
 //            db.collection("transactions").document().setData(["type":type])
 //            db.collection("transactions").document().setData(["size":size])
@@ -143,15 +149,35 @@ struct BuyView: View {
         for i in snap!.documentChanges {
             let documentId = i.document.documentID
             let lowestask = i.document.get("lowestask")
+            let pricehistory = i.document.get("pricehistory")
+            
+            store_value = ("\(lowestask!)")
+            
+            var prices = ("\(pricehistory!)")
+            prices.append("50000")
+
+            print(prices)
+
+            let stringArray = prices.components(separatedBy: CharacterSet.decimalDigits.inverted)
+            
+            print(prices)
+            print(stringArray)
+            
+//            for item in stringArray {
+//                if let history = Int(item) {
+//                    print("number: \(history)")
+//                    storage.append(Double(history))
+//                }
+//            }
+
 
             DispatchQueue.main.async {
                 lowestasks.append("\(lowestask!)")
+                pricehistories.append("\(pricehistory)")
             }
 
 
         }
-
-
     }
 }
 }
