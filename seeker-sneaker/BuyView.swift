@@ -18,6 +18,7 @@ struct BuyView: View {
     var body: some View {
         VStack{
             ScrollView{
+                VStack {
                 Text(product.title.capitalized)
                     .font(.largeTitle)
                     .padding(.vertical, 20)
@@ -92,10 +93,11 @@ struct BuyView: View {
                         }
                         
                     }
-                    
+                    Text("\n\n\n\n") // Extra Space
                 }
-                
+                }.padding(.vertical, -70)
             }
+            FooterButtons(in_search: false)
         }
     }
 }

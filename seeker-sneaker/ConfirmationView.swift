@@ -44,7 +44,10 @@ struct ConfirmationView: View {
                 // "amount" for product "product" of size "size" into
                 // sthe database
             }
+            FooterButtons(in_search: false)
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
 

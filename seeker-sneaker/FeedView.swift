@@ -28,7 +28,9 @@ struct FeedView: View {
                     .animation(.easeOut(duration: 0.3))
                 }
             }
-        }
+            FooterButtons(in_search: true)
+        }.navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
 

@@ -30,9 +30,13 @@ struct HomeView: View {
                         .font(.system(size: 20, design: .rounded))
                         .foregroundColor(.green)
                         
-                }.animation(.spring())
+                }
+                .animation(.easeIn(duration: 0))
             }
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
+        .navigationTitle("")
     }
 }
 

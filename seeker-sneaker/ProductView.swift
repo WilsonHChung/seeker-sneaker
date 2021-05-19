@@ -84,7 +84,10 @@ struct ProductView: View {
                 
                 // Visualization of Past Sales
             }
+            FooterButtons(in_search: false)
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarHidden(true)
     }
 }
 
