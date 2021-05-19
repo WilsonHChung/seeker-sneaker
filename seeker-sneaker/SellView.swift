@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SellView: View {
+    
+    @State var highestbid = ""
+    @State var highestbids: [String] = []
+    
     var size: Double = 7.5
     var product: Feed = feedData[0]
     var lowest_ask: Int = 450 // obtain from db
-    var highest_offer: Int = 400 // obtain from db
+    var highest_offer: Int = 250 // obtain from db
     @State var asking = false
     @State private var ask = 2000.0
     @State private var isEditing = false
@@ -33,9 +38,13 @@ struct SellView: View {
                 }
                 
                 
-                Image(product.image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                HStack {
+                    Image(product.image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }.onAppear(perform: {
+                    download()
+                })
                 
                 VStack {
                     if !asking {
@@ -43,9 +52,15 @@ struct SellView: View {
                             // Update db with new transaction,
                             // go to confirmation page
                         }) {
-                            Text(String(format: "Sell Now for $%i", highest_offer))
-                                .font(.title)
-                                .accentColor(.green)
+                            
+                            List(0..<highestbids.count, id: \.self) { i in
+//                                Text(String(format: "Buy Now for $%i", price))
+                                Text("Sell Now for $\(highestbids[0])")
+                                    .font(.title)
+                                    .accentColor(.green)
+                                    .padding(.horizontal, 60)
+                                    .padding(.vertical, 25)
+                            }
                         }
                         Text("or")
                             .font(.title)
@@ -75,19 +90,26 @@ struct SellView: View {
                             .accentColor(.green)
                             .padding(.horizontal, 30)
                         
-                        Text(String(format: "Lowest Ask: $%i", lowest_ask))
-                            .padding(.top, 20)
+//                        Text(String(format: "Lowest Ask: $%i", lowest_ask))
+//                            .padding(.top, 20)
                             
                         
                         Text(String(format: "Your Ask: $%.0f", ask))
                             .padding(.bottom, 5)
+//
+//                        Text(String(format: "Highest Offer: $%i", highest_offer))
+//                            .padding(.bottom, 20)
                         
-                        Text(String(format: "Highest Offer: $%i", highest_offer))
-                            .padding(.bottom, 20)
+                        List(0..<highestbids.count, id: \.self) { i in
+                            Text("Highest Bid: $\(highestbids[0])")
+                                .padding(.vertical, -20)
+                                .padding(.horizontal, 102)
+                        }
                         
                         Button(action: {
                             // Update db with new offer,
                             // go to confirmation page
+                            upload()
                         }) {
                             Text("Submit")
                                 .font(.title)
@@ -101,6 +123,39 @@ struct SellView: View {
             }
         }
     }
+    func upload() {
+        let db = Firestore.firestore()
+//        db.collection("transactions").document().setData(["lowestask":ask])
+//        db.collection("transactions")
+//            .document("air")
+//            .set("lowestask":ask, { merge: true });
+    }
+
+    func download() {
+    
+        let db = Firestore.firestore()
+        db.collection("transactions").addSnapshotListener {(snap, err) in
+
+
+        if err != nil {
+            print("There is an error downloading content from the database.")
+            return
+        }
+
+        for i in snap!.documentChanges {
+            let documentId = i.document.documentID
+            let highestbid = i.document.get("highestbid")
+
+            DispatchQueue.main.async {
+                highestbids.append("\(highestbid!)")
+            }
+
+
+        }
+
+
+    }
+}
 }
 
 struct SellView_Previews: PreviewProvider {
@@ -108,3 +163,4 @@ struct SellView_Previews: PreviewProvider {
         SellView()
     }
 }
+

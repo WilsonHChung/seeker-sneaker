@@ -4,7 +4,6 @@
 //
 //  Created by Dominic Gutierrez on 3/3/21.
 //
-
 import SwiftUI
 
 struct Feed: Identifiable {

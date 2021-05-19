@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD00AEC7261929CD00BB7DCE /* databasetest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD00AEC6261929CD00BB7DCE /* databasetest.swift */; };
+		DD00AEE4261934EC00BB7DCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD00AEE3261934EB00BB7DCE /* GoogleService-Info.plist */; };
+		DD717A09263A42CF007E4CE8 /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD717A08263A42CF007E4CE8 /* BuyView.swift */; };
+		DD717A0E263A42FE007E4CE8 /* SellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD717A0D263A42FE007E4CE8 /* SellView.swift */; };
+		DD717A17263A522F007E4CE8 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = DD717A16263A522F007E4CE8 /* SwiftUICharts */; };
 		DD9581C725DE2A99008FABA5 /* seeker_sneakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9581C625DE2A99008FABA5 /* seeker_sneakerApp.swift */; };
 		DD9581C925DE2A99008FABA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9581C825DE2A99008FABA5 /* ContentView.swift */; };
 		DD9581CB25DE2A9A008FABA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD9581CA25DE2A9A008FABA5 /* Assets.xcassets */; };
@@ -14,14 +19,13 @@
 		DD9581D925DE2A9A008FABA5 /* seeker_sneakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9581D825DE2A9A008FABA5 /* seeker_sneakerTests.swift */; };
 		DD9581E425DE2A9A008FABA5 /* seeker_sneakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9581E325DE2A9A008FABA5 /* seeker_sneakerUITests.swift */; };
 		DD95821825E72B45008FABA5 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD95821725E72B45008FABA5 /* Storyboard.storyboard */; };
+		DDD8814F2619282500F32DC1 /* Pods_seeker_sneaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F94BB5E73994F2B18DE6FC44 /* Pods_seeker_sneaker.framework */; };
 		E3B90CE825EF97E000476745 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90CE725EF97E000476745 /* Feed.swift */; };
 		E3B90CED25EF9A0C00476745 /* ImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90CEC25EF9A0C00476745 /* ImagesView.swift */; };
 		E3B90CF225EF9AB700476745 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90CF125EF9AB700476745 /* FeedView.swift */; };
 		E3B90CF725EFAFA500476745 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90CF625EFAFA500476745 /* SearchBar.swift */; };
 		E3B90D0426045B4100476745 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90D0326045B4100476745 /* HomeView.swift */; };
 		E3B90D0926045C0B00476745 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90D0826045C0B00476745 /* ProductView.swift */; };
-		E3B90D0E26393C4C00476745 /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90D0D26393C4C00476745 /* BuyView.swift */; };
-		E3B90D1626393F2500476745 /* SellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B90D1526393F2500476745 /* SellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2473B21892D1CB839604C5E4 /* Pods-seeker-sneaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seeker-sneaker.debug.xcconfig"; path = "Target Support Files/Pods-seeker-sneaker/Pods-seeker-sneaker.debug.xcconfig"; sourceTree = "<group>"; };
+		DD00AEC6261929CD00BB7DCE /* databasetest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = databasetest.swift; sourceTree = "<group>"; };
+		DD00AEE3261934EB00BB7DCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DD717A08263A42CF007E4CE8 /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
+		DD717A0D263A42FE007E4CE8 /* SellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellView.swift; sourceTree = "<group>"; };
 		DD9581C325DE2A99008FABA5 /* seeker-sneaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seeker-sneaker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD9581C625DE2A99008FABA5 /* seeker_sneakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seeker_sneakerApp.swift; sourceTree = "<group>"; };
 		DD9581C825DE2A99008FABA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,8 +70,8 @@
 		E3B90CF625EFAFA500476745 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		E3B90D0326045B4100476745 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E3B90D0826045C0B00476745 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
-		E3B90D0D26393C4C00476745 /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
-		E3B90D1526393F2500476745 /* SellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellView.swift; sourceTree = "<group>"; };
+		EF33FF91CB8AEDE0799F247F /* Pods-seeker-sneaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seeker-sneaker.release.xcconfig"; path = "Target Support Files/Pods-seeker-sneaker/Pods-seeker-sneaker.release.xcconfig"; sourceTree = "<group>"; };
+		F94BB5E73994F2B18DE6FC44 /* Pods_seeker_sneaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_seeker_sneaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD8814F2619282500F32DC1 /* Pods_seeker_sneaker.framework in Frameworks */,
+				DD717A17263A522F007E4CE8 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +101,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82670A9C6A6E3152C2CBDABC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F94BB5E73994F2B18DE6FC44 /* Pods_seeker_sneaker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C93484F61AD492EC226E57B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2473B21892D1CB839604C5E4 /* Pods-seeker-sneaker.debug.xcconfig */,
+				EF33FF91CB8AEDE0799F247F /* Pods-seeker-sneaker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DD9581BA25DE2A99008FABA5 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +125,8 @@
 				DD9581D725DE2A9A008FABA5 /* seeker-sneakerTests */,
 				DD9581E225DE2A9A008FABA5 /* seeker-sneakerUITests */,
 				DD9581C425DE2A99008FABA5 /* Products */,
+				C93484F61AD492EC226E57B4 /* Pods */,
+				82670A9C6A6E3152C2CBDABC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,7 +143,9 @@
 		DD9581C525DE2A99008FABA5 /* seeker-sneaker */ = {
 			isa = PBXGroup;
 			children = (
+				DD00AEE3261934EB00BB7DCE /* GoogleService-Info.plist */,
 				DD9581C625DE2A99008FABA5 /* seeker_sneakerApp.swift */,
+				DD00AEC6261929CD00BB7DCE /* databasetest.swift */,
 				DD9581C825DE2A99008FABA5 /* ContentView.swift */,
 				DD9581CA25DE2A9A008FABA5 /* Assets.xcassets */,
 				E3B90CE725EF97E000476745 /* Feed.swift */,
@@ -121,8 +153,8 @@
 				E3B90CF125EF9AB700476745 /* FeedView.swift */,
 				E3B90D0326045B4100476745 /* HomeView.swift */,
 				E3B90D0826045C0B00476745 /* ProductView.swift */,
-				E3B90D0D26393C4C00476745 /* BuyView.swift */,
-				E3B90D1526393F2500476745 /* SellView.swift */,
+				DD717A08263A42CF007E4CE8 /* BuyView.swift */,
+				DD717A0D263A42FE007E4CE8 /* SellView.swift */,
 				E3B90CF625EFAFA500476745 /* SearchBar.swift */,
 				DD9581CF25DE2A9A008FABA5 /* Info.plist */,
 				DD9581CC25DE2A9A008FABA5 /* Preview Content */,
@@ -164,15 +196,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD9581E825DE2A9A008FABA5 /* Build configuration list for PBXNativeTarget "seeker-sneaker" */;
 			buildPhases = (
+				19322D36A872647C7E2D3469 /* [CP] Check Pods Manifest.lock */,
 				DD9581BF25DE2A99008FABA5 /* Sources */,
 				DD9581C025DE2A99008FABA5 /* Frameworks */,
 				DD9581C125DE2A99008FABA5 /* Resources */,
+				038067AF2C571E89332E4787 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "seeker-sneaker";
+			packageProductDependencies = (
+				DD717A16263A522F007E4CE8 /* SwiftUICharts */,
+			);
 			productName = "seeker-sneaker";
 			productReference = DD9581C325DE2A99008FABA5 /* seeker-sneaker.app */;
 			productType = "com.apple.product-type.application";
@@ -244,6 +281,9 @@
 				Base,
 			);
 			mainGroup = DD9581BA25DE2A99008FABA5;
+			packageReferences = (
+				DD717A15263A522F007E4CE8 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = DD9581C425DE2A99008FABA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD9581CE25DE2A9A008FABA5 /* Preview Assets.xcassets in Resources */,
+				DD00AEE4261934EC00BB7DCE /* GoogleService-Info.plist in Resources */,
 				DD9581CB25DE2A9A008FABA5 /* Assets.xcassets in Resources */,
 				DD95821825E72B45008FABA5 /* Storyboard.storyboard in Resources */,
 			);
@@ -282,20 +323,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		038067AF2C571E89332E4787 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-seeker-sneaker/Pods-seeker-sneaker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-seeker-sneaker/Pods-seeker-sneaker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-seeker-sneaker/Pods-seeker-sneaker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19322D36A872647C7E2D3469 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-seeker-sneaker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD9581BF25DE2A99008FABA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E3B90D0926045C0B00476745 /* ProductView.swift in Sources */,
+				DD717A0E263A42FE007E4CE8 /* SellView.swift in Sources */,
 				E3B90CF225EF9AB700476745 /* FeedView.swift in Sources */,
 				E3B90D0426045B4100476745 /* HomeView.swift in Sources */,
+				DD717A09263A42CF007E4CE8 /* BuyView.swift in Sources */,
 				E3B90CED25EF9A0C00476745 /* ImagesView.swift in Sources */,
-				E3B90D0E26393C4C00476745 /* BuyView.swift in Sources */,
 				DD9581C925DE2A99008FABA5 /* ContentView.swift in Sources */,
-				E3B90D1626393F2500476745 /* SellView.swift in Sources */,
 				E3B90CE825EF97E000476745 /* Feed.swift in Sources */,
 				DD9581C725DE2A99008FABA5 /* seeker_sneakerApp.swift in Sources */,
+				DD00AEC7261929CD00BB7DCE /* databasetest.swift in Sources */,
 				E3B90CF725EFAFA500476745 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +419,9 @@
 		DD9581E625DE2A9A008FABA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -390,13 +476,16 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
 		DD9581E725DE2A9A008FABA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -441,15 +530,18 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};
 		DD9581E925DE2A9A008FABA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2473B21892D1CB839604C5E4 /* Pods-seeker-sneaker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -457,6 +549,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"seeker-sneaker/Preview Content\"";
 				DEVELOPMENT_TEAM = C8BXUWKJSP;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "seeker-sneaker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,6 +566,7 @@
 		};
 		DD9581EA25DE2A9A008FABA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF33FF91CB8AEDE0799F247F /* Pods-seeker-sneaker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -479,12 +574,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"seeker-sneaker/Preview Content\"";
 				DEVELOPMENT_TEAM = C8BXUWKJSP;
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "seeker-sneaker/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "cmpe137.seeker-sneaker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -612,6 +709,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD717A15263A522F007E4CE8 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD717A16263A522F007E4CE8 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD717A15263A522F007E4CE8 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DD9581BB25DE2A99008FABA5 /* Project object */;
 }

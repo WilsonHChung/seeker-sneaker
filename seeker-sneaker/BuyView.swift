@@ -2,12 +2,17 @@
 //  BuyView.swift
 //  seeker-sneaker
 //
-//  Created by Dominic Gutierrez on 4/27/21.
+//  Created by Wilson Chung on 4/28/21.
 //
 
 import SwiftUI
+import Firebase
 
 struct BuyView: View {
+    
+    @State var lowestask = ""
+    @State var lowestasks: [String] = []
+    
     var size: Double = 7.5
     var product: Feed = feedData[0]
     var price: Int = 450 // obtain from db
@@ -31,10 +36,13 @@ struct BuyView: View {
                         .font(.title)
                 }
                 
-                
-                Image(product.image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                HStack {
+                    Image(product.image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                }.onAppear(perform: {
+                    download()
+                })
                 
                 VStack {
                     if !offering {
@@ -42,9 +50,14 @@ struct BuyView: View {
                             // Update db with new transaction,
                             // go to confirmation page
                         }) {
-                            Text(String(format: "Buy Now for $%i", price))
-                                .font(.title)
-                                .accentColor(.green)
+                            List(0..<lowestasks.count, id: \.self) { i in
+//                                Text(String(format: "Buy Now for $%i", price))
+                                Text("Buy Now for $\(lowestasks[0])")
+                                    .font(.title)
+                                    .accentColor(.green)
+                                    .padding(.horizontal, 55)
+                                    .padding(.vertical, 25)
+                            }
                         }
                         Text("or")
                             .font(.title)
@@ -64,8 +77,9 @@ struct BuyView: View {
                         }
                     }
                     if offering {
+                                                
                         Slider(value: $offer,
-                               in: 0...(Double(price) - 1),
+                               in: 0...(Double(price) + 400),
                                step: 5,
                                onEditingChanged: {
                                 editing in
@@ -74,14 +88,20 @@ struct BuyView: View {
                             .accentColor(.green)
                             .padding(.horizontal, 30)
                         
-                        Text(String(format: "Highest Offer: $%i", highest_offer))
-                            .padding(.top, 20)
-                        
+//                        Text(String(format: "Highest Offer: $%i", highest_offer))
+//                            .padding(.top, 20)
+
                         Text(String(format: "Your Offer: $%.0f", offer))
-                            .padding(.bottom, 5)
+//                            .padding(.bottom, 5)
+//
+//                        Text(String(format: "Lowest Ask: $%i", price))
+////                            .padding(.bottom, 20)
                         
-                        Text(String(format: "Lowest Ask: $%i", price))
-                            .padding(.bottom, 20)
+                        List(0..<lowestasks.count, id: \.self) { i in
+                            Text("Lowest Ask: $\(lowestasks[0])")
+                                .padding(.vertical, -20)
+                                .padding(.horizontal, 103)
+                        }
                         
                         Button(action: {
                             // Update db with new offer,
@@ -99,6 +119,41 @@ struct BuyView: View {
             }
         }
     }
+    func upload() {
+        let db = Firestore.firestore()
+//            db.collection("transactions").document().setData(["name":name])
+//            db.collection("transactions").document().setData(["type":type])
+//            db.collection("transactions").document().setData(["size":size])
+//            db.collection("transactions").document().setData(["price":price])
+
+    }
+
+    func download() {
+
+        
+        let db = Firestore.firestore()
+        db.collection("transactions").addSnapshotListener {(snap, err) in
+
+
+        if err != nil {
+            print("There is an error downloading content from the database.")
+            return
+        }
+
+        for i in snap!.documentChanges {
+            let documentId = i.document.documentID
+            let lowestask = i.document.get("lowestask")
+
+            DispatchQueue.main.async {
+                lowestasks.append("\(lowestask!)")
+            }
+
+
+        }
+
+
+    }
+}
 }
 
 struct BuyView_Previews: PreviewProvider {
