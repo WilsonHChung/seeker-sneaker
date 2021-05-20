@@ -17,7 +17,13 @@ struct ProductView: View {
     @State var highestbid = ""
     @State var lowestask = ""
     @State var pricehistory = ""
-//    @State var test = 1.0
+    @State var update_page = 0
+    
+    
+    @State var bid = ""
+    @State var ask = ""
+
+
 
     @State var highestbids: [String] = []
     @State var lowestasks: [String] = []
@@ -28,6 +34,9 @@ struct ProductView: View {
     @State var expand = false
     @State private var selected_size = 7.5
     var product: Feed = feedData[0]
+    
+    
+    
     var body: some View {
         VStack{
             ScrollView{
@@ -52,7 +61,8 @@ struct ProductView: View {
                         }
                     }
                 }.onAppear(perform: {
-                    download()
+//                    download()
+                    
                 })
                 if expand {
                 Picker("Size", selection: $selected_size){
@@ -77,15 +87,11 @@ struct ProductView: View {
                         VStack{
                             Text("Lowest Ask")
                             // Price for size from db
-                            List(0..<lowestasks.count, id: \.self) { i in
-                                Text(lowestasks[0])
-                                    .listRowInsets(EdgeInsets())
-                                    .padding(.horizontal, 45)
-                            }
+                            Text("$" + ask)
                         }
-                        .padding(.vertical, 30)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 10)
                         .border(Color.green, width: 3)
-                        .font(.system(size: 20))
 
                     }
                     
@@ -93,19 +99,21 @@ struct ProductView: View {
                         VStack{
                             Text("Highest Offer")
                             // Price for size from db
-                            List(0..<highestbids.count, id: \.self) { i in
-                                Text(highestbids[0])
-                                    .listRowInsets(EdgeInsets())
-                                    .padding(.horizontal, 45)
-                            }
-                                
+                            Text("$" + bid)
                         }
-                        .padding(.vertical, 30)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 10)
                         .border(Color.red, width: 3)
-                        .font(.system(size: 20))
 
                     }
-                }
+                }.onAppear(perform: {
+                    
+                    if (update_page == 0){
+                        download()
+                    }
+                    
+                })
+                
                 .padding(.vertical, 20)
                 
                 Image(product.image)
@@ -127,9 +135,6 @@ struct ProductView: View {
         }
 
     }
-    func upload() {
-        let db = Firestore.firestore()
-    }
 
     func download() {
         
@@ -141,6 +146,7 @@ struct ProductView: View {
         db.collection("transactions").addSnapshotListener {(snap, err) in
 
 
+//            db.collection("transactions").document().addSnapshotListener(<#T##listener: FIRDocumentSnapshotBlock##FIRDocumentSnapshotBlock##(DocumentSnapshot?, Error?) -> Void#>)
             if err != nil {
                 print("There is an error downloading content from the database.")
                 return
@@ -155,6 +161,9 @@ struct ProductView: View {
                 let lowestask = i.document.get("lowestask")
                 let pricehistory = i.document.get("pricehistory")
 //                let test = i.document.get("test")
+                ask = ("\(lowestask!)")
+                bid = ("\(highestbid!)")
+
                 
                 // removes extraneous characters and stores or appends purely purchase prices
                 let prices = ("\(pricehistory!)")

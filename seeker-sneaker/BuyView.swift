@@ -66,7 +66,7 @@ struct BuyView: View {
                                 }
                             
                         }.onDisappear(perform: {
-                            upload()
+//                            upload_latestprice()
                         })
                             
                         Text("or")
@@ -110,12 +110,14 @@ struct BuyView: View {
                         
                         NavigationLink(
                             destination:
-                                ConfirmationView(type: "Offer", size: size, product: product, amount: String(offer))){
-                            Text("Submit")
-                                .font(.title)
-                                .padding(.vertical, 5)
-                                .accentColor(.green)
-                        }
+                                ConfirmationView(type: "Offer", size: size, product: product, amount: String(Int(offer)))){
+                                    Text("Submit")
+                                        .font(.title)
+                                        .padding(.vertical, 5)
+                                        .accentColor(.green)
+                                }.onDisappear(perform: {
+//                                    upload_bid()
+                                })
                     }
                     
                 }
@@ -123,15 +125,13 @@ struct BuyView: View {
             }
         }
     }
-    func upload() {
+    func upload_latestprice() {
         let db = Firestore.firestore()
-        db.collection("test").document("air jordan 1 fragment").setData(["latestprice":store_value])
-
-//            db.collection("transactions").document().setData(["name":name])
-//            db.collection("transactions").document().setData(["type":type])
-//            db.collection("transactions").document().setData(["size":size])
-//            db.collection("transactions").document().setData(["price":price])
-
+        db.collection("transactions").document("air jordan 1 fragment").setData(["latestprice":store_value], merge: true)
+    }
+    func upload_bid() {
+        let db = Firestore.firestore()
+        db.collection("transactions").document("air jordan 1 fragment").setData(["highestbid":String(Int(offer))], merge: true)
     }
 
     func download() {
@@ -153,15 +153,15 @@ struct BuyView: View {
             
             store_value = ("\(lowestask!)")
             
-            var prices = ("\(pricehistory!)")
-            prices.append("50000")
-
-            print(prices)
-
-            let stringArray = prices.components(separatedBy: CharacterSet.decimalDigits.inverted)
-            
-            print(prices)
-            print(stringArray)
+//            var prices = ("\(pricehistory!)")
+//            prices.append("50000")
+//
+//            print(prices)
+//
+//            let stringArray = prices.components(separatedBy: CharacterSet.decimalDigits.inverted)
+//            
+//            print(prices)
+//            print(stringArray)
             
 //            for item in stringArray {
 //                if let history = Int(item) {

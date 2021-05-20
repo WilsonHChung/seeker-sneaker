@@ -65,7 +65,8 @@ struct SellView: View {
                             
             
                         }.onDisappear(perform: {
-                            upload()
+//                            upload_latestprice()
+//                            download()
                         })
                         Text("or")
                             .font(.title)
@@ -107,12 +108,15 @@ struct SellView: View {
                         
                         NavigationLink(
                             destination:
-                            ConfirmationView(type: "Ask", size: size, product: product, amount: String(ask))){
+                            ConfirmationView(type: "Ask", size: size, product: product, amount: String(Int(ask)))){
                                 Text("Submit")
                                     .font(.title)
                                     .padding(.vertical, 5)
                                     .accentColor(.green)
-                            }
+                            }.onDisappear(perform: {
+//                                upload_ask()
+//                                download()
+                            })
                         }
                     
                     }
@@ -123,16 +127,14 @@ struct SellView: View {
         }
     
 
-    func upload() {
+    func upload_latestprice() {
         let db = Firestore.firestore()
-        db.collection("test").document("air jordan 1 fragment").setData(["latestprice":store_value])
-
-        //        db.collection("transactions").document().setData(["lowestask":ask])
-//        db.collection("transactions")
-//            .document("air")
-//            .set("lowestask":ask, { merge: true });
+        db.collection("transactions").document("air jordan 1 fragment").setData(["latestprice":store_value], merge: true)
     }
-
+    func upload_ask() {
+        let db = Firestore.firestore()
+        db.collection("transactions").document("air jordan 1 fragment").setData(["lowestask":String(Int(ask))], merge: true)
+    }
     func download() {
     
         let db = Firestore.firestore()
