@@ -8,40 +8,10 @@
 import SwiftUI
 import Firebase
 
-//struct Feed: Identifiable {
-//    var id = UUID()
-//    var title: String
-//    var image: String
-//
-//}
-
-extension String {
-    func load() -> UIImage {
-        do {
-            guard let url = URL(string: self)
-            else {
-                return UIImage()
-            }
-            let data: Data = try
-                Data(contentsOf: url)
-            
-            return UIImage(data: data) ?? UIImage()
-        }
-        catch {
-            
-        }
-        return UIImage()
-    }
-}
-
-//var feedData = [] as Array<Feed>
-
-
 struct FeedView: View {
     
     var i = 0
     
-
     @State var text = ""
     @State var brand = ""
     @State var name = ""
@@ -51,14 +21,28 @@ struct FeedView: View {
     @State var names: [String] = []
     @State var imageUrls: [String] = []
     
-    init() {
-//        download()
-//        storeFeedData()
-    }
-    
 
     var body: some View {
         VStack{
+            
+            HStack {
+                Text("Seeker Sneaker")
+                    .font(.title)
+                    .offset(x: -45)
+                NavigationLink(destination: Transactions()){
+                    VStack{
+                        Text("Profile")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(width: 70, height: 40)
+                            .background(Color.black)
+                            .cornerRadius(35.0)
+                    }
+                }
+                .offset(x: 45)
+            }
+        
+            
             SearchBar(text: $text)
             GeometryReader { bounds in
                 ScrollView {
@@ -79,6 +63,7 @@ struct FeedView: View {
             }
 
     }
+        .navigationBarHidden(true)
     }
 }
 

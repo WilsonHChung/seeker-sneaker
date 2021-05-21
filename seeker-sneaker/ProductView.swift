@@ -19,16 +19,12 @@ struct ProductView: View {
     @State var pricehistory = ""
     @State var update_page = 0
     
-    
     @State var bid = ""
     @State var ask = ""
-
-
 
     @State var highestbids: [String] = []
     @State var lowestasks: [String] = []
     @State var pricehistories: [String] = []
-//    @State var tests: [Double] = []
 
     
     @State var expand = false
@@ -40,97 +36,111 @@ struct ProductView: View {
     var body: some View {
         VStack{
             ScrollView{
-                Text(product.title.capitalized)
-                    .font(.largeTitle)
+                VStack {
+                    Text(product.title.capitalized)
+                        .font(.largeTitle)
+                        .padding(.vertical, 20)
+                        .multilineTextAlignment(.center)
+                    HStack{
+                        if !expand {
+                            Text("Size:")
+                                
+                        }
+                        Button(action: {
+                            self.expand.toggle()
+                        }) {
+                            if expand {
+                                Text("Select")
+                            }
+                            else if selected_size == floor(selected_size) {
+                                Text(String(format: "%.0f", selected_size))
+                            } else {
+                                Text(String(format: "%.1f", selected_size))
+                            }
+                        }
+                    }
+                        .font(.headline)
+                        .foregroundColor(.black)
+                        .padding()
+                        .frame(width: 112, height: 30)
+                        .background(Color.white)
+                        .cornerRadius(35.0)
+                        .overlay (RoundedRectangle(cornerRadius: 35) .stroke())
+                    if expand {
+                    Picker("Size", selection: $selected_size){
+                        // should iterate through sizes from db
+                        Text("7.5").tag(7.5)
+                        Text("8").tag(8.0)
+                        Text("8.5").tag(8.5)
+                        Text("9").tag(9.0)
+                        Text("9.5").tag(9.5)
+                        Text("10").tag(10.0)
+                        Text("10.5").tag(10.5)
+                        Text("11").tag(11.0)
+                        Text("11.5").tag(11.5)
+                        Text("12").tag(12.0)
+                    }
+                    .pickerStyle(WheelPickerStyle())
+                    .padding(.vertical, -10)
+                    }
+                    
+                    HStack(spacing: 50){
+                        NavigationLink(destination: BuyView(size: selected_size, product: product)){
+                            VStack{
+                                Text("Lowest Ask")
+                                // Price for size from db
+                                Text("$" + ask)
+                            }
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 150, height: 60)
+                            .background(Color.green)
+                            .cornerRadius(35.0)
+                        }
+                        
+                        NavigationLink(destination: SellView(size: selected_size, product: product)){
+                            VStack{
+                                Text("Highest Offer")
+                                // Price for size from db
+                                Text("$" + bid)
+                            }
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 150, height: 60)
+                            .background(Color.red)
+                            .cornerRadius(35.0)
+
+                        }
+                    }.onAppear(perform: {
+                        
+                        if (update_page == 0){
+                            download()
+                        }
+                        
+                    })
+                    
                     .padding(.vertical, 20)
-                    .multilineTextAlignment(.center)
-                HStack{
-                    if !expand {
-                        Text("Size:")
-                    }
-                    Button(action: {
-                        self.expand.toggle()
-                    }) {
-                        if expand {
-                            Text("Select")
-                        }
-                        else if selected_size == floor(selected_size) {
-                            Text(String(format: "%.0f", selected_size))
-                        } else {
-                            Text(String(format: "%.1f", selected_size))
-                        }
-                    }
-                }.onAppear(perform: {
-//                    download()
                     
-                })
-                if expand {
-                Picker("Size", selection: $selected_size){
-                    // should iterate through sizes from db
-                    Text("7.5").tag(7.5)
-                    Text("8").tag(8.0)
-                    Text("8.5").tag(8.5)
-                    Text("9").tag(9.0)
-                    Text("9.5").tag(9.5)
-                    Text("10").tag(10.0)
-                    Text("10.5").tag(10.5)
-                    Text("11").tag(11.0)
-                    Text("11.5").tag(11.5)
-                    Text("12").tag(12.0)
+                    Image(product.image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    
+                    // Visualization of Past Sales
+                    Spacer()
+                    
+
+                    LineView(data: data,
+                             title: "Price History",
+                             legend: "All Sales",
+                             valueSpecifier: "$%.0f")
+                        .frame(height: UIScreen.main.bounds.size.height)
+                        .padding()
+
                 }
-                .pickerStyle(WheelPickerStyle())
-                .padding(.vertical, -10)
-                }
-                
-                HStack(spacing: 50){
-                    NavigationLink(destination: BuyView(size: selected_size, product: product)){
-                        VStack{
-                            Text("Lowest Ask")
-                            // Price for size from db
-                            Text("$" + ask)
-                        }
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 10)
-                        .border(Color.green, width: 3)
+                .padding(.vertical, -45)
 
-                    }
-                    
-                    NavigationLink(destination: SellView(size: selected_size, product: product)){
-                        VStack{
-                            Text("Highest Offer")
-                            // Price for size from db
-                            Text("$" + bid)
-                        }
-                        .padding(.horizontal, 10)
-                        .padding(.vertical, 10)
-                        .border(Color.red, width: 3)
-
-                    }
-                }.onAppear(perform: {
-                    
-                    if (update_page == 0){
-                        download()
-                    }
-                    
-                })
-                
-                .padding(.vertical, 20)
-                
-                Image(product.image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                
-                // Visualization of Past Sales
-                Spacer()
-                
-
-                LineView(data: data,
-                         title: "Price History",
-                         valueSpecifier: "$%.0f")
-                    .frame(height: UIScreen.main.bounds.size.height)
-                    .padding()
-
-            
             }
         }
 
@@ -142,11 +152,9 @@ struct ProductView: View {
         // if so update the values for the lowest
         
         let db = Firestore.firestore()
-//            db.collection("transactions").document("\(product.title)").addSnapshotListener {(snap, err) in
         db.collection("transactions").addSnapshotListener {(snap, err) in
 
 
-//            db.collection("transactions").document().addSnapshotListener(<#T##listener: FIRDocumentSnapshotBlock##FIRDocumentSnapshotBlock##(DocumentSnapshot?, Error?) -> Void#>)
             if err != nil {
                 print("There is an error downloading content from the database.")
                 return
@@ -160,7 +168,7 @@ struct ProductView: View {
                 let highestbid = i.document.get("highestbid")
                 let lowestask = i.document.get("lowestask")
                 let pricehistory = i.document.get("pricehistory")
-//                let test = i.document.get("test")
+                
                 ask = ("\(lowestask!)")
                 bid = ("\(highestbid!)")
 

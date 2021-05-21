@@ -14,6 +14,12 @@ struct Feed: Identifiable {
 
 
 let feedData = [
+    Feed(title: "adidas yeezy 700 v3 arzareth",
+         image: "adidas_v3"),
+    Feed(title: "adidas yeezy boost 380 mist reflective",
+         image: "adidas_mist"),
+    Feed(title: "adidas yeezy boost 700 inertia",
+         image: "adidas_700"),
     Feed(title: "air jordan 1 bred toe",
          image: "bred_toe"),
     Feed(title: "air jordan 1 fragment",
@@ -38,4 +44,23 @@ let feedData = [
          image: "red_2"),
     Feed(title: "nike yeezy 2 pure platinum",
          image: "platinum_2"),
+    Feed(title: "adidas ultraboost 21 core black",
+         image: "ultraboost_21"),
+    Feed(title: "new balance 992 grey",
+         image: "newbalance"),
+    Feed(title: "new balance 992 kith spring 2",
+         image: "newbalance_2"),
+    Feed(title: "vans era colette cobra snake",
+         image: "vans_snake"),
+    Feed(title: "adidas top ten 2000 lakers",
+         image: "adidas_lakers"),
+    Feed(title: "nike blazer low dark grey",
+         image: "nike_blazer"),
+    Feed(title: "nike adapt huarache white black",
+         image: "nike_adapt"),
+    Feed(title: "nike dunk low university red (2020)",
+         image: "nike_dunk"),
+    Feed(title: "nike air foamposite one university blue",
+         image: "nike_foam"),
+    
 ]

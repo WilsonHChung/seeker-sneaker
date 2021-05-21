@@ -28,99 +28,117 @@ struct SellView: View {
     var body: some View {
         VStack{
             ScrollView{
-                Text(product.title.capitalized)
-                    .font(.largeTitle)
-                    .padding(.vertical, 20)
-                    .multilineTextAlignment(.center)
-                
-                if size == floor(size) {
-                    Text(String(format: "Size %.0f", size))
-                        .font(.title)
-                } else {
-                    Text(String(format: "Size %.1f", size))
-                        .font(.title)
-                }
-                
-                
-                HStack {
-                    Image(product.image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                }.onAppear(perform: {
-                    download()
-                })
-                
                 VStack {
-                    if !asking {
-                        NavigationLink(
-                        destination:
-                        ConfirmationView(type: "Sale", size: size, product: product, amount: store_value)){
-                            List(0..<highestbids.count, id: \.self) { i in
-                                Text("Sell Now for $\(highestbids[0])")
-                                    .font(.title)
-                                    .accentColor(.green)
-                                    .padding(.horizontal, 60)
-                                    .padding(.vertical, 25)
-                            }
-                            
-            
-                        }.onDisappear(perform: {
-//                            upload_latestprice()
-//                            download()
-                        })
-                        Text("or")
-                            .font(.title)
-                            .padding(.vertical, 10)
+                    Text(product.title.capitalized)
+                        .font(.largeTitle)
+                        .padding(.vertical, 20)
+                        .multilineTextAlignment(.center)
+                    
+                    if size == floor(size) {
+                        Text(String(format: "Size %.0f", size))
+                            .font(.headline)
+                            .foregroundColor(.black)
+                            .padding()
+                            .frame(width: 112, height: 30)
+                            .background(Color.white)
+                            .cornerRadius(35.0)
+                            .overlay (RoundedRectangle(cornerRadius: 35) .stroke())
+                    } else {
+                        Text(String(format: "Size %.1f", size))
+                            .font(.headline)
+                            .foregroundColor(.black)
+                            .padding()
+                            .frame(width: 112, height: 30)
+                            .background(Color.white)
+                            .cornerRadius(35.0)
+                            .overlay (RoundedRectangle(cornerRadius: 35) .stroke())
                     }
-                    Button(action: {
-                        self.asking.toggle()
-                    }) {
+                    
+                    
+                    HStack {
+                        Image(product.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    }.onAppear(perform: {
+                        download()
+                    })
+                    
+                    VStack {
                         if !asking {
-                        Text("Place an Ask")
-                            .font(.title)
-                            .accentColor(.orange)
-                        } else {
-                            Text(String(format: "Cancel Ask"))
-                                .font(.title)
-                                .accentColor(.red)
-                        }
-                    }
-                    if asking {
-                        Slider(value: $ask,
-                               in: Double(highest_offer)+5.0...2000.0,
-                               step: 5,
-                               onEditingChanged: {
-                                editing in
-                                isEditing = editing
-                               })
-                            .accentColor(.green)
-                            .padding(.horizontal, 30)
-                        
-                            
-                        Text(String(format: "Your Ask: $%.0f", ask))
-                            .padding(.bottom, 5)
-                        
-                        List(0..<highestbids.count, id: \.self) { i in
-                            Text("Highest Bid: $\(highestbids[0])")
-                                .padding(.vertical, -20)
-                                .padding(.horizontal, 102)
-                        }
-                        
-                        NavigationLink(
+                            NavigationLink(
                             destination:
-                            ConfirmationView(type: "Ask", size: size, product: product, amount: String(Int(ask)))){
-                                Text("Submit")
-                                    .font(.title)
-                                    .padding(.vertical, 5)
-                                    .accentColor(.green)
-                            }.onDisappear(perform: {
-//                                upload_ask()
-//                                download()
-                            })
+                            ConfirmationView(type: "Sale", size: size, product: product, amount: store_value)){
+                                    Text("Sell Now for $\(store_value)")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding()
+                                        .frame(width: 185, height: 60)
+                                        .background(Color.green)
+                                        .cornerRadius(35.0)
+                                
+                                
+                
+                            }
+                            Text("or")
+                                .font(.headline)
+                                .padding(.vertical, 10)
                         }
-                    
+                        Button(action: {
+                            self.asking.toggle()
+                        }) {
+                            if !asking {
+                            Text("Place an Ask")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .frame(width: 150, height: 60)
+                                .background(Color.orange)
+                                .cornerRadius(35.0)
+                            } else {
+                                Text(String(format: "Cancel Ask"))
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .frame(width: 150, height: 60)
+                                    .background(Color.red)
+                                    .cornerRadius(35.0)
+                            }
+                        }
+                        if asking {
+                            Slider(value: $ask,
+                                   in: Double(highest_offer)+5.0...3000.0,
+                                   step: 5,
+                                   onEditingChanged: {
+                                    editing in
+                                    isEditing = editing
+                                   })
+                                .accentColor(.green)
+                                .padding(.horizontal, 30)
+                            
+                                
+                            Text(String(format: "Your Ask: $%.0f", ask))
+                                .padding(.bottom, 5)
+                            
+                            Text("Highest Bid: $\(highestbids[0])")
+                                .padding(.bottom, 3)
+                            
+                            NavigationLink(
+                                destination:
+                                ConfirmationView(type: "Ask", size: size, product: product, amount: String(Int(ask)))){
+                                    Text("Submit")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .padding(.vertical, 10)
+                                        .frame(width: 150, height: 60)
+                                        .background(Color.green)
+                                        .cornerRadius(35.0)
+                                }
+                            }
+                        
+                        }
                     }
-                    
+                    .padding(.vertical, -45)
+
                 }
                 
             }

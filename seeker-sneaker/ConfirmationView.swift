@@ -52,22 +52,44 @@ struct ConfirmationView: View {
                 Text("$" + amount)
                     .font(.largeTitle)
                     .accentColor(.green)
+                
+                    .padding(50)
+
+                
                 Text(String(format: "Your %@ has been entered into our database. Let us handle the rest. Thank you for using Seeker Sneaker!", type.lowercased()))
-                    .padding(.vertical, 40)
-                    .padding(.horizontal, 20)
-                    .fixedSize(horizontal: false, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
-                    .multilineTextAlignment(.leading)
-                    .font(.title)
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding(.vertical, 10)
+                    .padding(.horizontal, 15)
+                    .frame(width: 350, height: 110)
+                    .background(Color.blue)
+                    .cornerRadius(35.0)
                 // Enter the transaction of type "type" and amount
                 // "amount" for product "product" of size "size" into
                 // sthe database
+                
+                NavigationLink(destination: FeedView()){
+                    VStack{
+                        Text("Dismiss")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(width: 120, height: 60)
+                            .background(Color.red)
+                            .cornerRadius(35.0)
+                            .padding(.vertical, 225)
+                    }
+                }
+
             }
         }.onDisappear(perform: {
             if(type == "Sale" || type == "Purchase") {
                 upload_purchasehistory()
             }
         })
+        .navigationBarHidden(true)
+
     }
+    
     func upload_latestprice() {
         let db = Firestore.firestore()
         db.collection("transactions").document("air jordan 1 fragment").setData(["latestprice": amount], merge: true)

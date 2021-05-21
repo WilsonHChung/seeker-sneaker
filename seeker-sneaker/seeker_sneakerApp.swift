@@ -27,7 +27,6 @@ struct seeker_sneakerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            
             ContentView()
         }
     }
