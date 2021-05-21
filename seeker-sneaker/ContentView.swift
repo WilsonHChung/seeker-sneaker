@@ -50,7 +50,9 @@ struct ContentView: View {
                     LoginButton()
                 }.animation(.spring())
                     
-                SignupButton()
+                NavigationLink(destination: FeedView()){
+                    SignupButton()
+                }.animation(.spring())
             }
             .padding()
     //        if authenticationDidSucceed {
