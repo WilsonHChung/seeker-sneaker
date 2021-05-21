@@ -5,7 +5,7 @@ Seeker Sneaker is an easy-to-use platform for buying and selling coveted shoes. 
 the app for the lowest price available, or make an offer with the amount they are willing to pay. On the other hand, sellers can quickly sell 
 their shoes for the highest offer available, or set their own price by placing an ask. Since the values of rare sneakers go up and down like the 
 stock market, the product page for each shoe shows a graphical representation of its price history to help users decide the right time to buy or 
-sell. Users can also view all their transactions from their profile page and keep track of their collection.
+sell. Users can also view all their transactions from their profile page to keep track of their collection.
 
 
 Usage
