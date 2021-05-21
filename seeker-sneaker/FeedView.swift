@@ -6,11 +6,43 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct FeedView: View {
+    
+    var i = 0
+    
     @State var text = ""
+    @State var brand = ""
+    @State var name = ""
+    @State var imageUrl = ""
+    
+    @State var brands: [String] = []
+    @State var names: [String] = []
+    @State var imageUrls: [String] = []
+    
+
     var body: some View {
         VStack{
+            
+            HStack {
+                Text("Seeker Sneaker")
+                    .font(.title)
+                    .offset(x: -45)
+                NavigationLink(destination: Transactions()){
+                    VStack{
+                        Text("Profile")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(width: 70, height: 40)
+                            .background(Color.black)
+                            .cornerRadius(35.0)
+                    }
+                }
+                .offset(x: 45)
+            }
+        
+            
             SearchBar(text: $text)
             GeometryReader { bounds in
                 ScrollView {
@@ -20,16 +52,22 @@ struct FeedView: View {
                         ForEach(feedData.filter({"\($0)".contains(text.lowercased()) || text.isEmpty})) {
                             item in
                             NavigationLink(destination: ProductView(product: item)){
-                            ImagesView(feed: item)
-                                .frame(width: bounds.size.width / 3 - 0.6, height: bounds.size.width / 3 - 0.6)
+                                ImagesView(feed: item)
+                                    .frame(width: bounds.size.width / 3 - 0.6, height: bounds.size.width / 3 - 0.6)
                             }
                         }
                     }
                     .animation(.easeOut(duration: 0.3))
+
                 }
             }
+<<<<<<< HEAD
             FooterButtons(in_search: true)
         }.navigationBarBackButtonHidden(true)
+=======
+
+    }
+>>>>>>> proto
         .navigationBarHidden(true)
     }
 }
@@ -39,70 +77,6 @@ struct FeedView_Previews: PreviewProvider {
         FeedView()
     }
 }
-
-//struct SearchBar: View {
-//    @Binding var searchText: String
-//    @Binding var isSearching: Bool
-//    @Binding var showResults: Bool
-//    @Binding var loadSearch: Bool
-//
-//    var body: some View {
-//
-//        HStack (spacing: 0) {
-//            HStack{
-//            TextField("Search", text: $searchText)
-//                .padding(.leading, 24)
-//            }
-//            .frame(height: 4)
-//            .padding()
-//            .background(Color(.systemGray5))
-//            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-//            .padding(.horizontal)
-//            .onTapGesture(perform: {
-//                isSearching = true
-//                showResults = true
-//            })
-//            .overlay {
-//                HStack {
-//                    Image(systemName: "magnifyingglass")
-//                    Spacer()
-//
-//
-//                    Button(action: {searchText = ""},
-//                    label: {
-//                        Image(systemName: "xmark.circle.fill")
-//                            .padding()
-//                            .foregroundColor(.gray)
-//                            .opacity(isSearching ? 1 : 0)
-//                    })
-//                }
-//                .padding(.horizontal, 32)
-//                .foregroundColor(.gray)
-//            }
-//            .animation(loadSearch ? .spring() : .none)
-//
-//            if isSearching {
-//                Button(action: {
-//                    isSearching = false
-//                    searchText = ""
-//                    showResults = false
-//
-//                    UIApplication.shared
-//                        .sendAction(#selector(UIResponder .resignFirstResponder), to: nil, from: nil, for: nil)
-//                },
-//                label: {
-//                    Text("Cancel")
-//                        .padding(.trailing)
-//                        .padding(.leading, 0)
-//                }
-//                )
-//                .transition(.move(edge: .trailing))
-//                .animation(.spring())
-//            }
-//        }
-//    }
-//}
-
 
 
 

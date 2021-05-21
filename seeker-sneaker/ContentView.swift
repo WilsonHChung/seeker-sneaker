@@ -6,10 +6,24 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
+
 
 let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0)
 
 struct ContentView: View {
+//    
+//    init() {
+//        FirebaseApp.configure()
+//    }
+    
+    @State var name = ""
+    
+    @State var brands: [String] = []
+    @State var names: [String] = []
+    @State var imageUrls: [String] = []
+        
     
     @State var username: String = ""
     @State var password: String = ""
@@ -19,29 +33,69 @@ struct ContentView: View {
 
     
     var body: some View {
-        VStack {
-            HelloText()
-            UserImage()
-            UsernameBar(username: $username)
-            PasswordBar(password: $password)
-            if authentiationDidFail {
-                Text("Wrong username or password. Try again.")
-                    .offset(y: -10)
-                    .foregroundColor(.red)
+        
+    
+        NavigationView{
+            VStack {
+                HelloText()
+                UserImage()
+                UsernameBar(username: $username)
+                PasswordBar(password: $password)
+    //            if authentiationDidFail {
+    //                Text("Wrong username or password. Try again.")
+    //                    .offset(y: -10)
+    //                    .foregroundColor(.red)
+    //            }
+                NavigationLink(destination: FeedView()){
+                    LoginButton()
+                }.animation(.spring())
+                    
+                NavigationLink(destination: FeedView()){
+                    SignupButton()
+                }.animation(.spring())
             }
-            LoginButton()
-                
-        }
-        .padding()
-        if authenticationDidSucceed {
-            Text("Login succeeded!")
-                .font(.headline)
-                .frame(width: 250, height: 80)
-                .background(Color.yellow)
-                .cornerRadius(20.0)
-                .animation(Animation.default)
+            .padding()
+    //        if authenticationDidSucceed {
+    //            Text("Login succeeded!")
+    //                .font(.headline)
+    //                .frame(width: 250, height: 80)
+    //                .background(Color.yellow)
+    //                .cornerRadius(20.0)
+    //                .animation(Animation.default)
+    //        }
         }
     }
+    
+    func upload() {
+        let db = Firestore.firestore()
+        db.collection("users").document().setData(["name":name])
+    }
+    func download() {
+        let db = Firestore.firestore()
+        db.collection("sneakers").addSnapshotListener {(snap, err) in
+            if err != nil {
+                print("There is an error downloading content from the database.")
+                return
+            }
+            
+            for i in snap!.documentChanges {
+                let documentId = i.document.documentID
+                let brand = i.document.get("brand")
+                let name = i.document.get("name")
+                let imageUrl = i.document.get("imageUrl")
+            
+                DispatchQueue.main.async {
+                    brands.append("\(brand)")
+                    names.append("\(name)")
+                    imageUrls.append("\(imageUrl)")
+                    print(name)
+
+                }
+            }
+            
+        }
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -61,12 +115,12 @@ struct HelloText: View {
 
 struct UserImage: View {
     var body: some View {
-        Image("userImage")
+        Image("oreo_350")
             .resizable()
             .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-            .frame(width: 150, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            .frame(width: 200, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             .clipped()
-            .cornerRadius(150)
+//            .cornerRadius(150)
             .padding(.bottom, 75)
     }
 }
@@ -99,7 +153,7 @@ struct PasswordBar: View {
 
 struct LoginButton: View {
     var body: some View {
-        Text("LOGIN")
+        Text("Login")
             .font(.headline)
             .foregroundColor(.white)
             .padding()
@@ -108,3 +162,16 @@ struct LoginButton: View {
             .cornerRadius(35.0)
     }
 }
+
+struct SignupButton: View {
+    var body: some View {
+        Text("Signup")
+            .font(.headline)
+            .foregroundColor(.white)
+            .padding()
+            .frame(width: 220, height: 60)
+            .background(Color.black)
+            .cornerRadius(35.0)
+    }
+}
+
