@@ -1,62 +1,26 @@
 Seeker Sneaker
 =============
 
-Speech Assistant Analyzer is a web application assistant that helps you improve your speaking skills. You can practice your speeches by speaking into your microphone for live translation or uploading an audio file. It displays and highlights your stuttering or filler words such as "uh" or "like." The app also helps keep track of your speech performance over time providing you the awareness and knowledge in order to create the perfect speech. Anyone can use it - teachers, engineers, students, anybody!
+Seeker Sneaker is an easy-to-use platform for buying and selling coveted shoes. With only a few clicks, buyers can purchase any pair listed on 
+the app for the lowest price available, or make an offer with the amount they are willing to pay. On the other hand, sellers can quickly sell 
+their shoes for the highest offer available, or set their own price by placing an ask. Since the values of rare sneakers go up and down like the 
+stock market, the product page for each shoe shows a graphical representation of its price history to help users decide the right time to buy or 
+sell. Users can also view all their transactions from their profile page and keep track of their collection.
 
-
-Installation
----------------
-
-Requirements:
-* Windows 10, Mac OS, or Linux 
-* Docker 
-    - https://docs.docker.com/get-docker/
-
-After installing Docker using the link above, install the project:
-
-    $ git clone https://github.com/WilsonHChung/speech-assistant-analyzer.git
-    $ cd speech-assistant-analyzer
-    $ make start
-    
-Once installation is completed, enter the following in your browser to use the app:
-
-    $ localhost:5000
 
 Usage
 ---------------
 
     1. Create an account in the app
     
-    2. Sign into the app
+    2. Sign into the app; you will be redirected to the search page
     
-    3. Choose between the following within the "Practice" tab on the toolbar above: "Record your speech" or "Upload an audio file"
+    3. Search for a shoe using the search bar, and tap on it to go to its product page
+
+    4. View the price history and choose whether you want to buy or sell
     
-    
-    "Record your speech" - Live translation or practicing for speeches 
-      - Options:
-        - Record audio: Allows you to do live translation in order to practice your speech in real-time 
-        - Stop: Stop recording when you're done practicing the current speech
-        - Show filler words: Highlights the filler words when your speech is shown on the display
-
-    "Upload an audio file" - Upload an existing audio file you want to examine with audio playback 
-      - Options:
-        - Choose file: Upload an audio file with the supported types which include .wav, .mp3, .ogg, .opus, .flac, and .webm
-        - Stop: You can stop audio playback and analysis anytime 
-        - Show filler words: Highlights the filler words when your speech is shown on the display
-
-
-    4. Finally, you can choose the option "Your Analytics" from the "Practice" tab when you're finsihed recording to check your progress.
-
-
-Contributing
----------------
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-
-
-License
----------------
-MIT <https://choosealicense.com/licenses/mit/>
+        - If buying, either buy now for the lowest ask or make an offer
+        
+        - If selling, either sell now to the highest offer or place an ask
+        
+    5. View your transaction confirmation
