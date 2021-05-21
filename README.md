@@ -8,6 +8,12 @@ stock market, the product page for each shoe shows a graphical representation of
 sell. Users can also view all their transactions from their profile page to keep track of their collection.
 
 
+Contributors
+---------------
+    Wilson Chung
+    
+    Dominic Gutierrez
+
 Usage
 ---------------
 
